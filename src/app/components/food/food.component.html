@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+<h2 class="text-center mb-4 mt-5">Food Selection</h2>
+<div  class="col-md-12">
+  <label class="form-label h4" for="food">choose a food item </label>
+  <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="" id="food" [(ngModel)]="selectedFood" (change)="onFoodSelection()">
+    <option value="0"   >Select Food Item</option>
+    <option *ngFor="let item of foodItems" [ngValue]="item">{{item.name}}</option>
+  </select>
+</div>
+<div class="col-md-12">
+  <label class="form-label h4 " for="quantity">Quantity</label>
+  <input class="form-control" type="number" min="1" placeholder="Enter Quantity" required id="quantity" [(ngModel)]="quantity"(input)="onQuantityChange()">
+</div>
+<div class="col-md-12" *ngIf=" selectedFood">
+  <p class="col-md-12 h5">Price per item:  ${{selectedFood.price}}</p>
+  <p class="col-md-12 h5">Total Cost: ${{totalCost}}</p>
+</div>
+<div class="col-md-12">
+  <button class="btn btn-primary mt-3" type="submit"(click)="order()" > <a class=" link link-light text-decoration-none" >order</a></button>
+</div>
+
+
+<!-- <h2>Order Food</h2>
+<div>
+  <label for="userId">User ID:</label>
+  <input type="text" id="userId" [(ngModel)]="userId" />
+</div>
+<div>
+  <h3>Menu:</h3>
+  <ul>
+    <li *ngFor="let item of menuItems">
+      <button (click)="handleItemClick(item)">{{ item.name }} - ${{ item.price }}</button>
+    </li>
+  </ul>
+</div>
+<div>
+  <h3>Order Summary:</h3>
+  <ul>
+    <li *ngFor="let item of selectedItems">{{ item.name }} - ${{ item.price}}</li>
+  </ul>
+  <p>Total Cost: ${{ totalCost }}</p>
+  <button (click)="handleSaveClick()">Save</button>
+</div> -->

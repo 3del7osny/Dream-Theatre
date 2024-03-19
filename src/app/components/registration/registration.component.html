@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+
+
+    <div class="col-md-6 offset-md-3">
+      <form class=" m-5 p-4 border rounded border-dark" (submit)="register()">
+        <!-- Input fields for email, password, first name, and last name -->
+        <h2 class="text-center mb-4 mt-5">Registration</h2>
+        <div class="col-md-12">
+          <label class="form-label " for="email">Email</label>
+          <input class="form-control" id="email" type="email" [(ngModel)]="email" name="email"
+            placeholder="Enter your Email" required>
+        </div><br>
+        <div class="col-md-12">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-control" id="password" type="password" [(ngModel)]="password" name="password"
+            placeholder="Enter your Password" required>
+        </div><br>
+        <div class="col-md-12">
+          <label class="form-label" for="fname">First Name</label>
+          <input class="form-control" id="fname" type="text" [(ngModel)]="firstName" name="firstName"
+            placeholder="Enter First Name" required>
+        </div><br>
+
+        <div class="col-md-12">
+          <label class="form-label" for="lname">Last Name</label>
+          <input class="form-control" id="lname" type="text" [(ngModel)]="lastName" name="lastName"
+            placeholder="Enter Last Name" required>
+        </div><br>
+        <div class="col-md-12">
+
+          <button class="btn btn-success mt-3" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<p>{{ registrationMessage }}</p>

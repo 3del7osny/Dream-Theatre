@@ -1,0 +1,31 @@
+
+
+<div class="container-fluid">
+  <div class="row">
+
+
+<div class="col-md-6 offset-md-3" *ngIf="!loggedIn">
+<form class=" m-5 p-4 border rounded border-dark" (ngSubmit)="login()">
+  <h2 class="text-center mb-4">Admin Login</h2>
+  <div class="col-md-12">
+    <label class="form-label " for="username">Username:</label>
+    <input class="form-control" type="text" id="username"placeholder="Enter user name" [(ngModel)]="username" name="adminUsername" required>
+  </div>
+  <div class="col-md-12">
+    <label class="form-label " for="password">Password:</label>
+    <input class="form-control" type="password" id="password" placeholder="Enter password"[(ngModel)]="password" name="adminPassword" required>
+  </div>
+  <div  class="col-md-12">
+    <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal"type="submit">Login</button>
+  </div>
+
+</form>
+</div>
+
+
+
+
+
+
+
+

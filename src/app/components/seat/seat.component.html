@@ -1,0 +1,94 @@
+<div>
+  <h1 class="text-center">Booking Seat</h1>
+</div>
+<table class="table  table- table-hover mt-5">
+    <thead class="table table-dark ">
+      <tr>
+        <th>Partition</th>
+        <th>cost</th>
+        <th>seats</th>
+        <th>total cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>VIP</td>
+        <td>100$ per one</td>
+        <td>
+          <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+          <label class="btn btn-secondary mx-3" for="option1">1</label>
+
+          <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+          <label class="btn btn-secondary mx-3" for="option2">2</label>
+
+          <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+          <label class="btn btn-secondary mx-3" for="option3">3</label>
+
+          <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+          <label class="btn btn-secondary mx-3" for="option4">4</label>
+
+          <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+          <label class="btn btn-secondary mx-3" for="option4">5</label>
+        </td>
+        <td>
+          total cost
+        </td>
+      </tr>
+      <tr>
+        <td>Middle</td>
+        <td>60$ per one</td>
+        <td>
+          <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" >
+          <label class="btn btn-secondary mx-3" for="option1">1</label>
+
+          <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+          <label class="btn btn-secondary mx-3" for="option2">2</label>
+
+          <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" >
+          <label class="btn btn-secondary mx-3" for="option3">3</label>
+
+          <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+          <label class="btn btn-secondary mx-3" for="option4">4</label>
+
+          <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+          <label class="btn btn-secondary mx-3" for="option4">5</label>
+        </td>
+        <td>
+          total cost
+        </td>
+      </tr>
+      <tr>
+        <td>Footer</td>
+        <td>40$ per one</td>
+        <td>
+          <button class="btn btn-secondary mx-3">1</button>
+
+          <button class="btn btn-secondary mx-3">2</button>
+
+          <button class="btn btn-secondary mx-3">3</button>
+
+
+          <button class="btn btn-secondary mx-3">4</button>
+
+          <button class="btn btn-secondary mx-3">5</button>
+        </td>
+        <td>
+          total cost
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><button class="btn btn-success" type="submit"> Booking Now</button></td>
+      </tr>
+    </tfoot>
+  </table>
+
+
+<script>
+  document.querySelectorAll('.btn-secondary').forEach((button) => {
+    button.addEventListener('click', () => {
+      button.style.background = 'yellow';
+    });
+  });
+</script>
